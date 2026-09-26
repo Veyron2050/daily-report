@@ -57,3 +57,25 @@ body {
   margin: 0 5px;
   color: #000;
   }
+
+/*table */
+.table {
+  width: 100%;
+  }
+  .table-head {
+  background-color: #eee;
+  }
+  .table-head th {
+  padding: 5px;
+  width: 15%;
+  border: 1px solid #000;
+  text-align: center;
+  }
+.table-head th:nth-child(4) {
+  width: 55%;
+  }
+  .table-body td {
+  padding: 10px;
+  border: 1px solid #000;
+  text-align: left;
+  }
