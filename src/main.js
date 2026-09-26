@@ -1,6 +1,5 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs } from "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
 import {getFirestore, collection, getDocs, addDoc} from "firebase/firestore";
 
@@ -33,7 +32,7 @@ const db = getFirestore(app);
 const fetchHistoryData = async () => {
 let tags = "";
 
-reportsコレクションのデータを取得
+//reportsコレクションのデータを取得
 const querySnapshot = await getDocs(collection(db, "reports"));
 
 // データをテーブル表の形式に合わせてHTMLに挿入
@@ -68,7 +67,7 @@ try {
 }
 
 if (document.getElementById("js-form")) {
-  document.getElementById("js-form").addEventListener("submit", (e) => submitData(e,addDoc,collection,db));
+  document.getElementById("js-form").addEventListener("submit", submitData);
 };
 
 
