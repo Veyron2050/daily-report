@@ -21,8 +21,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-const analytics = getAnalytics(app);
-
 // Cloud Firestoreの初期化
 
 const db = getFirestore(app);
@@ -36,8 +34,8 @@ let tags = "";
 const querySnapshot = await getDocs(collection(db, "reports"));
 
 // データをテーブル表の形式に合わせてHTMLに挿入
-querySnapshot. forEach((doc) => {
-console.log(`${doc. id} => ${doc. data()}`);
+querySnapshot.forEach((doc) => {
+console.log(`${doc.id} => ${doc.data()}`);
 tags += `<tr><td>${doc.data().date}</td><td>${doc.data().name}</td><td>${doc.data().work}</td><td>${doc.data().comment}</td></tr>`
 });
 document.getElementById("js-history").innerHTML = tags;
@@ -45,7 +43,7 @@ document.getElementById("js-history").innerHTML = tags;
 
 // Cloud Firestoreから取得したデータを表示する
 if (document.getElementById("js-history")) {
-fetchHistoryData() ;
+fetchHistoryData();
 }
 
 

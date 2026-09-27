@@ -10,16 +10,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./sanitize.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./src/style.css">
   </head>
   <body>
-    <form class="form" action=""
-    id="js-form">
+    <form class="form" action="" id="js-form">
+      <div class="form-list">
+        <label class="form-title" for="date">Date: </label>
+        <div class="form-field">
+          <input class="input-field" type="date" id="date" name="date">
+        </div>
+      </div>
     <div class="form-list">
     <label class="form-title" for="name">Name: </label>
     <div class="form-field">
-    <input class-"'input-field" type="text" id="name"
-    name="name">
+    <input class= "input-field" type="text" id="name" name="name">
     </div>
     </div>
     <div class="form-list">
@@ -32,8 +36,7 @@
     <div class="form-list">
     <label class="form-title" for="comment"> Comment: </label>
     <div class="form-field">
-    <textarea class="input-field" id="comment" name="comment"
-    rows="4" cols="50"></textarea>
+    <textarea class="input-field" id="comment" name="comment" rows="4" cols="50"></textarea>
     </div>
     </div>
     <div class="form-button">
@@ -45,6 +48,6 @@
     <a href="./history.html">History</a>
     </div>
 
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
