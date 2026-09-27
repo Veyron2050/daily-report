@@ -1,4 +1,6 @@
-export const submitData = async (e,addDoc,collection,db) => {
+import {addDoc,collection} from "firebase/firestore";
+
+export const submitData = async (e,db) => {
     e.preventDefault();
 
     const formData = new FormData(e.target);

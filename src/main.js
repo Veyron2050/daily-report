@@ -38,7 +38,7 @@ fetchHistoryData();
 import {submitData} from "./my-modules/submit-data";
 
 if (document.getElementById("js-form")) {
-  document.getElementById("js-form").addEventListener("submit", submitData);
+  document.getElementById("js-form").addEventListener("submit", (e) => submitData(e, db));
 };
 
 
