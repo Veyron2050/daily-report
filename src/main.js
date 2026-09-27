@@ -8,8 +8,6 @@ import {getFirestore, collection, getDocs, addDoc} from "firebase/firestore";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-console.log("VITE_PROJECT_ID:", import.meta.env.VITE_PROJECT_ID);
-
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_API_KEY,
   authDomain: import.meta.env.VITE_AUTH_DOMAIN,
@@ -33,7 +31,7 @@ import{fetchHistoryData} from "./my-modules/fetch-history-data";
 
 // Cloud Firestoreから取得したデータを表示する
 if (document.getElementById("js-history")) {
-fetchHistoryData();
+fetchHistoryData(getDocs,collection,db);
 }
 
 
