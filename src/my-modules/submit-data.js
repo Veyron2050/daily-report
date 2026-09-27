@@ -2,7 +2,7 @@ import {addDoc,collection} from "firebase/firestore";
 
 export const submitData = async (e,db) => {
     e.preventDefault();
-
+    console.log("db:", db);
     const formData = new FormData(e.target);
   try {
     const docRef = await addDoc(collection(db, "reports"), {
@@ -19,4 +19,3 @@ export const submitData = async (e,db) => {
 
 console.log("typeof addDoc:", typeof addDoc);
 console.log("typeof collection:", typeof collection);
-console.log("db:", db);
