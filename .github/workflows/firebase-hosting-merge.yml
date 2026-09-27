@@ -12,6 +12,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: npm ci
+      - run: |
+          if [ -n "$VITE_PROJECT_ID" ]; then
+            echo "VITE_PROJECT_ID is set"
+          else
+            echo "VITE_PROJECT_ID is NOT set"
+            exit 1
+          fi
+        env:
+          VITE_PROJECT_ID: ${{ vars.VITE_PROJECT_ID }}
+
       - run: npm run build
         env:
           VITE_API_KEY: ${{ vars.VITE_API_KEY }}
