@@ -16,3 +16,7 @@ export const submitData = async (e,db) => {
     console.error("Error adding document: ", e);
    }
   };
+
+console.log("typeof addDoc:", typeof addDoc);
+console.log("typeof collection:", typeof collection);
+console.log("db:", db);
